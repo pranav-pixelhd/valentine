@@ -95,9 +95,7 @@
         <button id="noBtn">No 🙃</button>
       </div>
 
-      </div> <a href="https://capable-jelly-4ef2ce.netlify.app/" style="display: block; text-align: center; color: #ff4d6d; font-weight: bold; margin-top: 20px;">
-   Click this my love! ❤️
-</a>
+      
     </div>
 
     <script>
@@ -155,7 +153,17 @@
 
       // YES = HEART ATTACK
       yesBtn.addEventListener("click", () => {
-        const end = Date.now() + 3500;
+        const end = Date.now() + 3500;// Change the heading text
+    document.querySelector("h1").innerHTML = "Yay! I love you! ❤️";
+
+    // Replace the buttons with your surprise link
+    const buttonArea = document.getElementById("buttons");
+    buttonArea.innerHTML = `
+        <a href="https://capable-jelly-4ef2ce.netlify.app/" 
+           style="display: inline-block; padding: 12px 25px; background-color: #ff4d6d; color: white; text-decoration: none; border-radius: 25px; font-weight: bold; margin-top: 20px; cursor: pointer; border: 2px solid white;">
+           Click for your surprise! 🎁
+        </a>
+    `;
 
         (function frame() {
           confetti({
